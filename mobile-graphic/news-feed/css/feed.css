@@ -1,7 +1,3 @@
-@media (max-width: 640px) {
-
-}
-
 @media (min-width: 641px) {
   .news__list {
     display: flex;
