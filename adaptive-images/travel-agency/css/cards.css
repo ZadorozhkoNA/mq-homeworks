@@ -1,5 +1,13 @@
+@media (max-width: 479px) {
+  /* В задании п. 1 - сделать чтобы карточки занимали всю ширину экрана,
+  на самом деле они и так занимают всю ширину, даже без этого медиа запроса */
+  .card {
+    width: 100%;
+  }
+}
+
 @media (min-width: 480px) {
-  
+
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -7,22 +15,57 @@
 }
 
 @media (min-width: 480px) and (max-width: 959px) {
-  
+
   .card {
     width: 50%;
   }
 }
 
-@media (min-width: 960px) and (max-width: 1280px) {
-  
+@media (min-width: 480px) and (max-width: 640px) {
+  .card:nth-child(3n+3) {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+
   .card {
+    width: 33.33%;
+  }
+
+  .card:nth-child(5n+1),
+  .card:nth-child(5n+2) {
+    width: 50%;
+  }
+}
+
+@media (min-width: 961px) and (max-width: 1280px) {
+
+  .card:nth-child(6n+5),
+  .card:nth-child(6n+6) {
+    width: 50%;
+  }
+  
+  .card,
+  .card:nth-child(n+13)
+   {
     width: 25%;
   }
 }
 
 @media (min-width: 1281px) {
-  
+
   .card {
     width: 20%;
+  }
+
+  .card:nth-child(8n+6),
+  .card:nth-child(8n+7),
+  .card:nth-child(8n+8) {
+    width: 33.33%;
+  }
+
+  .card:nth-child(n+17) {
+    width: 25%;
   }
 }

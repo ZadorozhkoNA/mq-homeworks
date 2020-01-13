@@ -1,0 +1,26 @@
+@media ( max-width: 960px ) {
+  /* Непонятно почему, но на скриншоте из домашнего задания,
+  для устройств с экраном 960 и уже блок "меню" отсутствует */
+  .aside__menu {
+    display: none;
+  }
+}
+
+@media ( min-width: 961px ) {
+
+  .page {
+    display: flex;
+  }
+
+  .aside {
+    --const-width: 320px;
+    max-width: var( --const-width );
+    min-width: var( --const-width );
+    margin-right: 40px;
+  }
+
+  .content {
+    flex-grow: 1; /* Предполагаю, что для выполнения задания нужен этот параметр, но и без него работает */
+    order: 1;
+  }
+}
